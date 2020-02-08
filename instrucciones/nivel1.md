@@ -1,8 +1,23 @@
 Introducción a JavaScript intermedio.
 Nivel 0 - Servidores y HTTPS
 ==============
+#Para entrar a google por ejemplo, vamos a ver que nos comunicamos con una computadora que tienen ellos como empresa, la cual tiene un nombre o numero (Remote adress o IP), esta computadora tiene un programa corriendo que es el servidor web
 
+#Los servidores web escuchan ciertos puntos llamados puertos y tenemos un total 65535 puertos por los que podemos escuchar
 
+#Google y otras paginas utilizan el HTTPS, que es mas seguro y nadie puede snifear o robar datos de nuestra conexion porque estan todos encriptados 
+
+#Las direcciones web estan conformadas por: dominio + puerto ===> www.google.com:443 (el numero es el puerto de google por defecto). En algunas ocasiones no es necesario colocar el puerto ya que el navegador ya sabes cual es el asignado y tampoco podemos cambiarlo debido a medidas de seguridad.
+
+#Un servidor esta escuchando un puerto en una maquina y lo que escucha son conexiones entrantes. Al ir a una pagina siempre se repite el mismo patron: 
+      REQUEST (peticion) ===> PROCESAMIENTO ===> RESPONSE (devolucion)
+Nosotros le pedimos al servidor que nos de alguna pagina web, este lo procesa y nos devuelve algun resultado. 
+
+#Si nosotros tenemos un servidor que brinda las respuestas, tambien debe haber una parte que realice peticiones e interprete las respuestas, llamado "cliente". En el caso de una pagina, el cliente es el navegador (Chrome, Firefox, etc).
+
+#DATO: Cuando vemos el codigo en la consola, este va a estar feo y mal escrito, debido a que pasan el codigo por un algoritmo el cual lo torna mas ilegible para proteger el mismo codigo y por seguridad. Este proceso se llama "ofuscacion" (https://es.wikipedia.org/wiki/Ofuscaci%C3%B3n). De todas formas es solo una medida de seguridad pequenia ya que tenemos varias y puede haber forma de tornar el codigo legible. 
+
+#Todo el tema servidor y seguridad es lo que hace el backend, ya que el navegador puede ser controlado por el usuario, por lo que debe estar todo protegido de punta a punta. 
 
 Nivel 1 - Capturando información del usuario mediante un formulario
 ==============
@@ -58,6 +73,8 @@ Para validar nuestro formulario, vamos a tener  que hacer lo siguiente:
 4. CSS:
     - Mostrar un estilo de error en los campos que tengan problemas
     - Mostrar un mensaje de error en los campos que tengan problemas
+
+#DATO: la validacion siempre es necesario hacerla en los dos puntos, tanto del lado del usuario como del lado del servidor.
 
 1.Obtener el valor de un formulario
 =========================
