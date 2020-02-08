@@ -1,4 +1,8 @@
 Introducción a JavaScript intermedio.
+Nivel 0 - Servidores y HTTPS
+==============
+
+
 
 Nivel 1 - Capturando información del usuario mediante un formulario
 ==============
@@ -78,6 +82,9 @@ Para validar nuestro formulario, vamos a tener  que hacer lo siguiente:
   - Si `nombre` es mayor a 50 caracteres, imprimir 
   el error: 'Este campo debe tener menos de 50 caracteres'
 
+  ES CLAVE HACER UN ARCHIVO DE PRUEBAS.JS PARA IR PROBANDO TODAS LAS FUNCIONES Y COMPROBAR QUE DEN EL RESULTADO ESPERADO, Y ASI NOS EVITAMOS TENER QUE IR UNA A UNA EN LA CONSOLA Y PERDER TIENPO. Se hace con el console.assert()
+
+  Estas pruebas unitarias con claves ya que estamos escribiend codigo para probar codigo. Estas pruebas nos sirven para nuestros companeros y tambien para nosotros mismos a futuro porque nos indica que es lo que deberia estar haciendo el programa. Si alguien viene y rompe el programa, modificando el funcionamiento de algo y no teniamos pruebas automatizadas, vamos a estar horas y horas haciendo debbug y viendo como solucionarlo
 
   Ahora vamos a hacer una validación más interesante.
   Queremos que nuestro nombre contenga sólo letras.
