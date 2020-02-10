@@ -20,15 +20,17 @@ function validarNombre(nombre) {
 
 function validarCiudad(ciudad) {
   if (ciudad === "") {
-    return 'Debe seleccionar una provincia para continuar'
+    return 'Debe seleccionar una provincia para continuar';
   }
+  return '';
 }
 
 function validarDescripcionRegalo(descripcionRegalo) {
   if (descripcionRegalo.length === 0) {
-    return 'Debe brindar una minima descripcion acerca de su regalo'
+    return 'Debe brindar una minima descripcion acerca de su regalo';
   }
   if (descripcionRegalo.length > 100) {
-    return 'Este campo debe contener menos de 100 caracteres'
+    return 'Este campo debe contener menos de 100 caracteres';
   }
+  return '';
 }
