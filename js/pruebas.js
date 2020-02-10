@@ -27,3 +27,8 @@ function probarValidarDescripcionRegalo() {
         validarDescripcionRegalo('asjdnasjdasdjalsjdlaskdjaskldjasdklajsdkalsdjaskldjaskldjasdlkasdjaskldjaslkdajsdklasjdaksldjaskdaskdljasdklasjdaklsdjalwidiawd') === 'Este campo debe contener menos de 100 caracteres', 'Validar regalo no verifico que no debe haber un string de +100 caracteres'
     )
 }
+
+//SUPER IMPORTANTE LLAMAR A LAS FUNCIONES UNA VEZ DEFINIDAS
+probarValidarCiudad();
+probarValidarDescripcionRegalo();
+probarValidarNombre();

@@ -3,6 +3,7 @@ const nombre = $form.nombre.value; // es igual a nombre = document.querySelector
 const ciudad = $form.ciudad.value;
 const comportamiento = $form.comportamiento.value;
 const descripcionRegalo = $form['descripcion-regalo'].value; // esta es otra forma de escribir cuando tenemos el "-" de por medio y tiene que ver con objetos
+
 console.log(nombre);
 console.log(ciudad);
 console.log(comportamiento);
@@ -19,7 +20,7 @@ function validarNombre(nombre) {
 }
 
 function validarCiudad(ciudad) {
-  if (ciudad === "") {
+  if (ciudad.length === 0) {
     return 'Debe seleccionar una provincia para continuar';
   }
   return '';
