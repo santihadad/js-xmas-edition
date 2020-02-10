@@ -18,5 +18,17 @@ function validarNombre(nombre) {
   return '';
 }
 
-// Hacer funcion para validar ciudad y que no sea vacio
-// Hacer funcion para validar descripcion regalo y que no sea vacio
+function validarCiudad(ciudad) {
+  if (ciudad === "") {
+    return 'Debe seleccionar una provincia para continuar'
+  }
+}
+
+function validarDescripcionRegalo(descripcionRegalo) {
+  if (descripcionRegalo.length === 0) {
+    return 'Debe brindar una minima descripcion acerca de su regalo'
+  }
+  if (descripcionRegalo.length > 100) {
+    return 'Este campo debe contener menos de 100 caracteres'
+  }
+}
