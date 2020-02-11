@@ -103,7 +103,9 @@ Para validar nuestro formulario, vamos a tener  que hacer lo siguiente:
 
   Estas pruebas unitarias con claves ya que estamos escribiend codigo para probar codigo. Estas pruebas nos sirven para nuestros companeros y tambien para nosotros mismos a futuro porque nos indica que es lo que deberia estar haciendo el programa. Si alguien viene y rompe el programa, modificando el funcionamiento de algo y no teniamos pruebas automatizadas, vamos a estar horas y horas haciendo debbug y viendo como solucionarlo
 
-  Cada cosa que hagamos, debemos tener el pruebas.js para ir probando que todo funcione correctamente. Lo agregamos al HTML
+  Cada cosa que hagamos, debemos tener el pruebas.js para ir probando que todo funcione correctamente. Lo agregamos al HTML como un nuevo script
+
+  Tambien debemos testear los casos positivos para las pruebas, ya que debemos probar todos los casos. El 'happy path' es cuando la funcion se ejecuta de manera correcta. Si o si hay que probar que las validacioenes funcionen, porque puede que estemos en un caso de falso-positivo
 
   Ahora vamos a hacer una validación más interesante.
   Queremos que nuestro nombre contenga sólo letras.
@@ -248,7 +250,7 @@ Atención: No se olviden de la `,` para separar múltiples valores.
   let cuentaErrores = 0;
   ```
   
-  6. Verificamos si hay un error en `nombr`e
+  6. Verificamos si hay un error en `nombre`
   
   ```
   if (errores.nombre) {
