@@ -52,8 +52,8 @@ function validarFormulario(event) {
   const esExito = manejarErrores(errores) === 0;
 
   if (esExito) {
-    document.querySelector('#exito').className = '';
     $form.className = 'oculto'
+    document.querySelector('#exito').className = '';
   }
   event.preventDefault();
 }
@@ -80,9 +80,11 @@ function manejarErrores(errores) {
     }
   });
 
-  return console.log(cantidadErrores);
+  return cantidadErrores;
 
 }
+const $form = document.querySelector('#carta-a-santa');
+$form.onsubmit = validarFormulario
 
 // errorNombre = errores.nombre; //nombre
 // errorCiudada = errores.ciudad; //ciudad
@@ -94,7 +96,7 @@ function manejarErrores(errores) {
 // else {
 //   $form.nombre.className = '';
 // }
-// if (errorCiudada) {
+// if (errorCiudad) {
 //   $form.ciudad.className = 'error';
 // }
 // else {
@@ -107,6 +109,3 @@ function manejarErrores(errores) {
 //   $form["descripcion-regalo"].className = '';
 // }
 // // EN TODAS LAS FUNCIONES LLAMA A LOS DISTINTOS ERRORES, SI ESTOS SON DISTINTOS A UN STRING VACIO (A CERO EN CUANTO A LENGTH) ES PORQUE  TENEMOS UN   ERROR Y POR ESO LE CAMBIA EL CLASSNAME A "ERROR", PARA QUE CON EL CSS SE PINTE DE ROJO. ESA ES LA LOGICA PARA TODO EL TEMA DE MANEJAR ERRORES
-
-const $form = document.querySelector('#carta-a-santa');
-$form.onsubmit = validarFormulario
