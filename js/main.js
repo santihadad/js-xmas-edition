@@ -32,6 +32,20 @@ function validarDescripcionRegalo(descripcionRegalo) {
   return '';
 }
 
+function redireccionarAWishlist() {
+  setTimeout(function () { window.location.href = "wishlist.html" }
+    , 5000)
+}
+/*
+function limpiarErrores() {
+  if (cantidadErrores > 0) {
+    const errores = document.querySelector('#errores').querySelectorAll('li');
+    errores.forEach(error => {
+      error.parentNode.removeChild(error);
+    });
+  }
+}
+*/
 function validarFormulario(event) {
   const $form = document.querySelector('#carta-a-santa');
 
@@ -54,35 +68,40 @@ function validarFormulario(event) {
   if (esExito) {
     $form.className = 'oculto'
     document.querySelector('#exito').className = '';
+    redireccionarAWishlist() // Aca agregamos la funcion para redirrecionar al wishlist con el timer de 5 segundos
   }
   event.preventDefault();
 }
 
 function manejarErrores(errores) {
+  const nombreInputs = Object.keys(errores);
+  const $errores = document.querySelector("#errores");
+  limpiarErrores();
 
-  const keys = Object.keys(errores);
-  const $errores = document.querySelector('#errores');
   let cantidadErrores = 0;
-
-  keys.forEach(function (key) {
-    const error = errores[key];
-
+  nombreInputs.forEach(function (nombreInput) {
+    const error = errores[nombreInput];
     if (error) {
-      cantidadErrores++
-      $form[key].className = 'error';
-
-      const $error = document.createElement('li')
+      cantidadErrores++;
+      $form[nombreInput].className = "error";
+      const $error = document.createElement("li");
       $error.innerText = error;
       $errores.appendChild($error);
-    }
-    else {
-      $form[key].className = '';
+    } else {
+      $form[nombreInput].className = "";
     }
   });
-
   return cantidadErrores;
-
 }
+
+function limpiarErrores() {
+  const errores = document.querySelector("#errores").querySelectorAll("li");
+  errores.forEach(error => {
+    error.parentNode.removeChild(error);
+  });
+}
+
+
 const $form = document.querySelector('#carta-a-santa');
 $form.onsubmit = validarFormulario
 
